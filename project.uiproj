@@ -1,0 +1,6 @@
+{
+  "Name": "PinkBot de Dareu HTML",
+  "ProjectType": "Process",
+  "Description": "Perifericos para el público femenino de la web Dareu con envio de emails en HTML",
+  "MainFile": "Main.xaml"
+}

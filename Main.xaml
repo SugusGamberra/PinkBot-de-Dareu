@@ -1,0 +1,995 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Net</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="716,13730" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="En este proyecto voy a intentar que el envio del email sea con HTML en vez de texto plano :3 Si sale bien pues será el archivo que recibas jiji si no será mi vergüenza oculta HAHAHAH" DisplayName="Secuencia Principal" sap:VirtualizedContainerService.HintSize="716,13707" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="boo_repetirBusqueda" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap2010:Annotation.AnnotationText="Lo primero que he creado es un boolean para poder repetir la búsqueda si sale mal para unirlo a un while, ya lo verás más adelante :3" DisplayName="Boolean para repetir búsqueda" sap:VirtualizedContainerService.HintSize="682,176" sap2010:WorkflowViewState.IdRef="Assign_19">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Creo un while para meter todo mi proceso, incluido el try catch, porque desde el catch es desde donde lanzo el bucle para que se repita si male sal xD pongo en mi condición del while que si el boolean creado es igual a true que se repita todo!" DisplayName="While para repetir proceso en caso necesario" sap:VirtualizedContainerService.HintSize="682,13403" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+        <ui:InterruptibleWhile.Body>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="680,13220" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch sap2010:Annotation.AnnotationText="Creamos el try catch para almacenar en él el proceso y las excepciones de sistema y business!" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="646,13160" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_colorSeleccionado" />
+                <Variable x:TypeArguments="x:String" Name="str_correoDestino" />
+                <Variable x:TypeArguments="x:String" Name="str_respuestaUser" />
+              </TryCatch.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="644,7891" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dic_diccionarioColores" />
+                    <Variable x:TypeArguments="x:String" Name="str_palabraBuscada" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="dt_productos" />
+                    <Variable x:TypeArguments="x:String" Name="str_html" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" sap2010:Annotation.AnnotationText="Le pedimos al usuario que seleccione de una lista un color o diseño" DisplayName="Input Dialog para petición de colores" sap:VirtualizedContainerService.HintSize="610,374" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Selecciona un color o diseño de la lista: " OptionsString="Rosa;Celeste;Degradado;Menta;Verde;Blanco;Cerezo;Adorable;Beige;Melocotón;Flor;Oveja;Aurora;Panda;Lavanda;Sanrio;Hello Kitty;Cinnamoroll;Kuromi" Title="🎨 Elige un color o diseño">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[str_colorSeleccionado]</OutArgument>
+                    </ui:InputDialog.Result>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InputDialog>
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="Este log es para comprobar la selección del usuario y poder llevar una buena trazabilidad de la automatización" DisplayName="Log Message para mostrar la selección del User" sap:VirtualizedContainerService.HintSize="610,236" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;El usuario ha elegido el color: &quot; + str_colorSeleccionado]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <Assign sap2010:Annotation.AnnotationText="Como en Dareu no se pueden buscar las cosas por Español, hacemos un diccionario que almacene pares de clave y valor, donde básicamente le hago una traducción de las etiquetas que usa la página para clasificar sus componentes por color y diseño" DisplayName="Creación de diccionario" sap:VirtualizedContainerService.HintSize="610,193" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dic_diccionarioColores]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" xml:space="preserve">[New Dictionary(Of String, String) From {
+  {"rosa", "pink"},
+  {"celeste", "light blue"},
+  {"degradado", "gradient"},
+  {"menta", "light green"},
+  {"verde", "green"},
+  {"lila", "purple"},
+  {"blanco", "white"},
+  {"cerezo", "sakura"},
+  {"adorable", "cute"},
+  {"beige", "moccasin"},
+  {"melocotón", "peach"},
+  {"flor", "flower"},
+  {"panda", "panda"},
+  {"oveja", "sheep"},
+  {"aurora", "aurora"},
+  {"lavanda", "lavender"},
+  {"sanrio", "sanrio"},
+  {"hello kitty", "hello kitty"},
+  {"cinnamoroll", "cinnamoroll"},
+  {"kuromi", "kuromi"}
+}]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <If sap2010:Annotation.AnnotationText="Este if es para la business exception SL-01, en caso de que el bot se raye e introduzca mal la información del diccionario (porque se invente algo tipo mil números o letras aleatorias), que el if diga si mi diccionario contiene el color seleccionado, le asignamos la palabra buscada al diccionario, si no que lance una excepción de negocio y que pida al usuario si quiere volver a buscar otro color o no, como he dicho en el while y el boolean, lo veremos en la parte de catch :D" Condition="[dic_diccionarioColores.ContainsKey(str_colorSeleccionado.ToLower.Trim)]" DisplayName="If para SL-01" sap:VirtualizedContainerService.HintSize="610,743" sap2010:WorkflowViewState.IdRef="If_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,243" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap2010:Annotation.AnnotationText="Ahora le decimos que la variable donde almacena la selección del usuario que me use el diccionario que he creado para que sepa que tiene que escribirlo en el valor que le di (o sea la traducción en inglés)" DisplayName="Palabra buscada = Diccionario de ccolores" sap:VirtualizedContainerService.HintSize="434,183" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[str_palabraBuscada]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[dic_diccionarioColores(str_colorSeleccionado.ToLower.Trim)]</InArgument>
+                          </Assign.Value>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,235" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw sap2010:Annotation.AnnotationText="Si no encuentra la palabra creamos la regla de excepción de negocio SL-01, y pedimos que la lance si se da el caso :D" DisplayName="Throw B.E. SL-01" Exception="[New BusinessRuleException(&quot;SL-01 - El usuario no ha seleccionado un color/diseño &quot;)]" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="Throw_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Throw>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Abrimos el navegador y ponemos que use Chrome" BrowserType="Chrome" DisplayName="Open Browser en Chrome" sap:VirtualizedContainerService.HintSize="610,6285" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.dareushop.com">
+                    <ui:OpenBrowser.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="576,6105" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="str_verProductos" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MaximizeWindow Window="{x:Null}" sap2010:Annotation.AnnotationText="Como buena práctica: maximizar la ventana" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="542,88" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:MaximizeWindow>
+                          <Delay sap2010:Annotation.AnnotationText="Le he querido poner un delay por desconfiada para que espere a que cargue todo" DisplayName="Delay de 1 segundo" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="542,168" sap2010:WorkflowViewState.IdRef="Delay_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Delay>
+                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Ahora uso el Table extraction para extraer la información que quiero de la página (precio, nombre del producto y url) y así la almaceno en una datatable" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Búsqueda de resultados en DAREU" sap:VirtualizedContainerService.HintSize="542,1488" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="5e44554f-ed52-4989-9156-3f7176a7d832" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1193" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_3" />
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Lo primero que hacemos es que cierre el pop-up para que no moleste, igualmente en propiedades le digo que se espere 1 segundito por si acaso y marco continue on error, por si dicho pop up desaparece que no haya problemas después :D igual por precavida marco el wait for ready como complete, más vale prevenir..." ClickType="CLICK_SINGLE" ContinueOnError="True" DelayMS="1000" DisplayName="Click 'Cerrar Pop-up'" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4f3f666d-0113-4141-9935-b156da3e65f9" InformativeScreenshot="dc4372c2e9f6fcd4fddb4430174ea36a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;svg' tag='svg' /&gt;" WaitForReady="COMPLETE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:Click>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Le doy al campo de búsqueda, marco wait for ready y pasamos a escribir lo que queremos buscar, también le marco el wait for ready HAHAHA" ClickType="CLICK_SINGLE" DisplayName="Click 'Campo de búsqueda'" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aaf38add-5706-4201-bb69-81873c35bae2" InformativeScreenshot="98f2f48b94f29e0c131f9a6f906f9056" Selector="&lt;webctrl aria-role='presentation' parentid='SiteHeader' tag='svg' /&gt;" WaitForReady="COMPLETE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:Click>
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Aquí selecciono el campo para escribir y escribo usando la variable de la palabra que buscamos, y le doy a enter, también le doy a wait for ready y empty field por sia caso" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[str_palabraBuscada+ &quot;[k(enter)]&quot;]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b6a00d0d-314b-4cca-9696-2a426aabd589" InformativeScreenshot="39e837c7185deabb4cba84c7851fdf1c" Selector="&lt;webctrl tag='INPUT' type='search' /&gt;" WaitForReady="COMPLETE">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                      </ui:Target>
+                                    </ui:TypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:TypeInto>
+                                  <uix:NExtractData sap2010:Annotation.AnnotationText="Aquí me extrae los datos y los almacena en una data table :3" AppendResults="False" ContinueOnError="True" DataTable="[dt_productos]" DisplayName="Extract Table Data de todos los productos" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&lt;ValidationErrorMessage /&gt;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='New column 0 Url'&gt;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&lt;ValidationErrorMessage /&gt;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 1'&gt;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&lt;ValidationErrorMessage /&gt;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataNextLink' /&gt;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext' name2='Column4' attr2='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="416,235" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="5e44554f-ed52-4989-9156-3f7176a7d832" Version="V4">
+                                    <uix:NExtractData.NextLink>
+                                      <uix:TargetAnchorable BrowserURL="dareushop.com/search" DesignTimeRectangle="1281, 571, 43, 44" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                  Next       ' parentid='CollectionAjaxContent' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                  Next       ' parentid='CollectionAjaxContent' tag='A' type='' class='' check:innerText='Next' /&gt;" Guid="26345db4-3cac-41ff-834a-3ab5825be0d6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search: 30 results found for &amp;quot;pink*&amp;quot; – DAREU Shop' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                    </uix:NExtractData.NextLink>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dareushop.com/search?type=product%2Carticle%2Cpage%2Ccollection&amp;options%5Bprefix%5D=last&amp;q=pink" DesignTimeRectangle="698, 612, 1132, 3291" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='collection-grid__wrapper' parentid='CollectionAjaxContent' tag='DIV' /&gt;" Guid="afc97ae4-41fe-4c3f-9b9f-b3eb9ccfe2c3" InformativeScreenshot="b90988445e5678b068dd9384e8031487.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search: 30 results found for &amp;quot;pink&amp;quot; – DAREU Shop' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                    </uix:NExtractData.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NExtractData>
+                                  <ui:CloseTab Browser="{x:Null}" sap2010:Annotation.AnnotationText="Cerramos la ventana para que no esté molestando xD" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="416,95" sap2010:WorkflowViewState.IdRef="CloseTab_1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CloseTab>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALEQa0zv0AAAACBjSFJNAACHDwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAABAWlDQ1BpY2MAACjPY2BgXJGTnFvMJMDAkJtXUhTk7qQQERmlwH6HgZFBkoGZQZPBMjG5uMAxIMCHASf4dg2oGggu64LMYiANcKakFicD6Q9AHJ9cUFTCwMAIsounvKQAxI4AskWKgI4CsnNA7HQIuwHEToKwp4DVhAQ5A9k8QLZDOhI7CYkNtQsEWJONkjORHZJcWlQGZUoB8WnGk8zJrJM4srm/CdiLBkqbKH7UnGAkYT3JjTWwPPZtdkEVa+fGWTVrMvfXXj780uD//5LUihKQZmdnAwZQGKKHDUIsfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsOw8A8P1N272DB40AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAUwSURBVFhHrVc7iF5VEN5/d88oxFcwiikSfIBYRHyAaArPWIogoqCFRkEEU2iXSrAUxUYkKEJEEEGxUbRRsYiijQ8sgqBJEMQUihpIfCSe2ad8M9/ce/ZPNsmiBw73/nfPmcc3M9/MzsycwzKV3JNWZdawVWb9XWWSf/9fV6cUe7a5wjJjVWKrzDQ+fdcyZyrYk2lZG14uvPfY3wt+bzWVG6f2NaZS0qDYZa7VAqOnRZ99wTt65oop9A5T+dC0/Gm1rLZaVk2Hp5nKYVN506o8aCqb/T7QIiLnHKIOclyEJ/Om8qqprHZ7eWqvtrrm77+Zykumch0QYNjmgWBzFMu02lgBe1jN52Wm8g2Fwst/TGXRVJb4XLBa8L7SaoEhi1axExk/t69F2GDE+gmbSZWem5YrWi1H4FkL5e5degoFbfR4qREJGENUFjpE/mhVHk802qCjM4KJg4SDcjGVA4hxp3i/qTxtWh4wlbtaLQ+3Wp4bEXKDgEoagd94LnSGvmMq5zG0oxHMbnxEfeP9rc7bD0zl5iy38CDOI8n4/V5T+YVK3IhWC5SvIBxTiBxgaCPUtTDxKn74x10ewzj8RJcXMG6e8IkhOR2xwpiWy03lIBUu8RlGJIoMZavlsGm5kEZMEJNMjItN5SiV381vSJw0bpLx88xW2USuQMhg6JWm8reHLpIylCcaIdeI7MeJJqFwQc/w0P30qgxlpCijCIOp3Goq35nK7jSy0QhT2RNKZbHV0ftEo+MNILLbSzJiWTYxTi+ENzJPxYCZTChbm8prROhzIOcGEkoavaXVcoxKszJ6IyJEYcBBOJ8CHnM2i2pITyNTI9keaVWOUsAX3ZmJ3/Fz8W4qnzLWrug0RqzYiM4Nkdm1vGgqd3aK5ykMifdGxNUv/ACqpbdDKfFsIvUuhWdZnmoA0Al5mp5scejdM6dffLvKVL7Ny63KCdAr/5YhCiKLnhE8UuUzhukUBFCeLFHIO9m0bE8DstxQXjBip6kc58VGar2PISo46zU8smhWEsrxOElsvRxIZN5nEjqcCTd+IxTJBSd5eO96nnN7xZjKkzQWSk6pggH+QANODkzorGQqt7kA9IA69IAfGyk0k87pe1Sesb+gafmZd5ZNA2qW3wpRSZkv845XQfR9lW1N5RiJIrseLH2UsY3cYKVkmZoGG7Yqb6+BmATURkNS+ZdZOcibeIn9CQ8sdBaD4y/qoB6hB32PRPV8oFbYC9bQMJ7GkH5vKpfwvjuegnelcnq9xDLZ7wrCe3g6aVF+wZ5Bp6/wLmcDwh4O5OwABvwqpyVQeoSwIJbuwde8uNRxOX7/lPNevxmSW5oWwAnhmAlW4CWTEF4PM0FT2Re55gbnwBOzgKns4ODRZ2paj+dHHD7RRrebyj3s7SE8YO/h7oeRX9FbhnbOydqbUC42FxiQHWwwotWBsbB/N5UT3fyHM/Ac78utll4xjNrbtGxmtfhwSqIblYcBZSfiRe4eDOgSMb+nxxnX/ulTEUjLomFdmzH2UhvY8jQDqalc2jQ7mHsRBmjJEsJks9wwcAa8qBJ4nP0BG1zxrKlcnV767DAMLGcYyXkAvX3VMzdKKMMBxaP3nBMDMTliKq9zeDm/I6Y50xKxPp3H04uTDjL7IVM5NIzVuUP5X6blkGl5z1SeMpXbMRFNVQcUu6wNLfb7hAolssNUbmLm43m9qWyLXhHlk6XYqidXjvJnhnq9tdaDQXCO6v2AkrQNEgn+Z1/4z2sNlDGeD/+Cc+YbkmnDEJ9l/Qu4kcJ7xSs6uwAAAABJRU5ErkJggg==" InformativeScreenshot="a8478bbfefe6c8823fa282718031e21b.jpg" Selector="&lt;html app='chrome.exe' url='https://dareushop.com/' /&gt;" Title="Search: 30 results found for &quot;pink*&quot; – DAREU Shop" Url="https://dareushop.com/" Version="V1" />
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                          <If sap2010:Annotation.AnnotationText="Aquí lo que hacemos es básicamente que si rellena los productos en la datatable que los escriba en el excel y lo envíe por mail, y si no que lance la segunda B.E. SL-02 ^^" Condition="[dt_productos.Rows.Count &gt; 0]" DisplayName="If: Si existe productos crear excel y email, si no SL-02" sap:VirtualizedContainerService.HintSize="542,4301" sap2010:WorkflowViewState.IdRef="If_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="540,3676" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="ss:SecureString" Name="mail_pass" />
+                                  <Variable x:TypeArguments="x:String" Name="mail_user" />
+                                  <Variable x:TypeArguments="x:Boolean" Name="boo_correoValido" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MultipleAssign sap2010:Annotation.AnnotationText="Como me gusta todo bonito he cerado un multiple assign para decirle que en esa datatable, en las posiciones 0, 1 , 2 y 3 me modifique el nombre de las columnas y que luego se vea toda chula" DisplayName="Multiple Assign: Asignando títulos a las cabeceras de las dt" sap:VirtualizedContainerService.HintSize="506,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                  <ui:MultipleAssign.AssignOperations>
+                                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dt_productos.Columns(0).ColumnName]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">Nombre</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dt_productos.Columns(1).ColumnName]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">URL</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                        <ui:AssignOperation.To>
+                                          <OutArgument x:TypeArguments="x:String">[dt_productos.Columns(2).ColumnName]</OutArgument>
+                                        </ui:AssignOperation.To>
+                                        <ui:AssignOperation.Value>
+                                          <InArgument x:TypeArguments="x:String">Precio</InArgument>
+                                        </ui:AssignOperation.Value>
+                                      </ui:AssignOperation>
+                                    </scg:List>
+                                  </ui:MultipleAssign.AssignOperations>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:MultipleAssign>
+                                <ui:LogMessage sap2010:Annotation.AnnotationText="Y aquí le digo que me muestre lo que he hecho para llevar una buena trazabilidad de lo que hace el botcito" DisplayName="Mostrar las columnas de la dt :3" sap:VirtualizedContainerService.HintSize="506,236" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Join(&quot;, &quot;, dt_productos.Columns.Cast(Of System.Data.DataColumn)().Select(Function(c) c.ColumnName))]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Creamos el Excel y con esta actividad le decimos que escriba en dicho archivo y en su hoja correspondiente la información extraída en la datatable :3" DataTable="[dt_productos]" DisplayName="Write Range Workbook: Escribir en Excel" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Hoja1" StartingCell="A1" WorkbookPath="Ficheros\PerifericosWebDareuHTML.xlsx">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:WriteRange>
+                                <ui:OutputDataTable sap2010:Annotation.AnnotationText="Para poder ver en el log que todo está saliendo bien convierto mi dt_productos a texto asignándole una nueva variable llamada str_verProductos yasí poder usarla en el log message :D" DataTable="[dt_productos]" DisplayName="Conversión de datatable a texto" sap:VirtualizedContainerService.HintSize="506,207" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_verProductos]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:OutputDataTable>
+                                <ui:LogMessage sap2010:Annotation.AnnotationText="Uso la variable que he creado para mostrar los productos en el log message :3" DisplayName="Mostrar los productos de la datatable en el log" sap:VirtualizedContainerService.HintSize="506,220" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[str_verProductos]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                                <Assign sap2010:Annotation.AnnotationText="Para poder enviar el mail necesito saber si el correo que introducirá el usuario es correcto (para validar si existe ya no sé, si hay forma me encantaría saberlo muajaj). De base lo ponemos en False para poder trabajar con el while aquí abajo :3" DisplayName="Creación de boolean para el correo" sap:VirtualizedContainerService.HintSize="506,192" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[boo_correoValido]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Assign>
+                                <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Si mi usuario escribe mal el correo necesito volver a darle la opción de que lo vuelva a escribir, por endde creo un while donde su condición inicial sea que el boolean que he creado sea igual a fallso." DisplayName="While: Bucle para pedir de nuevo el correo si es necesario" sap:VirtualizedContainerService.HintSize="506,1302" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                  <ui:InterruptibleWhile.Body>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,1110" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Empiezo pidiéndole al usuario que escriba el correo electrónico al que le vamos a enviar la información :D" DisplayName="Petición de email" sap:VirtualizedContainerService.HintSize="470,336" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="¿A qué correo deseas recibir los resultados?" Title="📧 Introduce tu email">
+                                        <ui:InputDialog.Result>
+                                          <OutArgument x:TypeArguments="x:String">[str_correoDestino]</OutArgument>
+                                        </ui:InputDialog.Result>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:InputDialog>
+                                      <If sap2010:Annotation.AnnotationText="Ahora, aquí viene la magia: he usado regex, sé que se explicó muy por encima, pero con la herramienta que pasó bruno pude hacerlo concretamente para ver si tiene &quot;@&quot;, &quot;.com&quot;, &quot;.es&quot;... así queda todo más limpito y chulo de lo que habia intentado en otros proyectos y pruebas que hice para el pinkbot HAHAHAH básicamente tomo la variable del correo y le digo si contiene estos caracteres bien, si no, se pide de nuevo... busqué en la docu y el foro de uipath como ponerlo en la condición (lo de system.text.regularexpressions.regex.ismatch) y salió perfe :D" Condition="[System.Text.RegularExpressions.Regex.IsMatch(str_correoDestino, &quot;^[^@\s]+@[^@\s]+\.[^@\s]+$&quot;)]" DisplayName="If: Si el correo está bien escrito seguimos, si no, volvemos a la peticion de email" sap:VirtualizedContainerService.HintSize="470,714" sap2010:WorkflowViewState.IdRef="If_6">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,211" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap2010:Annotation.AnnotationText="Si está bien pues le digo que el booleano está en verdadero, por ende, continua con el proceso :3" DisplayName="Boolean en verdadero" sap:VirtualizedContainerService.HintSize="434,151" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Boolean">[boo_correoValido]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                              </Assign.Value>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Assign>
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,230" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Por el contrario, si no lo identifica como verdadero, le informo al usuario de que ha escrito mal el correo y que lo vuelva a poner :3" AutoCloseAfter="00:00:00" DisplayName="Correo no válido" sap:VirtualizedContainerService.HintSize="434,170" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Parece que el correo ingresado no es válido. Inténtalo de nuevo.&quot;]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:MessageBox>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                  </ui:InterruptibleWhile.Body>
+                                  <ui:InterruptibleWhile.Condition>
+                                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="boo_correoValido = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                                  </ui:InterruptibleWhile.Condition>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:InterruptibleWhile>
+                                <umab:CreateHtmlContent sap2010:Annotation.AnnotationText="Para crear el cuerop del correo he usado esta actividad que busqué por html en &quot;activities&quot; y a l vez en visual studio code para que me fuese mas facil estructurar el codigo, porque en esta actividad acababa mareada :( por eso se veran restos como &lt;!DOCTYPE html&gt; o los propios &lt;html&gt;&lt;/html&gt; ^^U perdon y gracias :,D" DisplayName="Create HTML Content: crear cuerpo correo html" sap:VirtualizedContainerService.HintSize="506,280" HtmlContent="[str_html]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_2">
+                                  <umab:CreateHtmlContent.HtmlContentArg>
+                                    <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                                          <umabh:HtmlTableValueMapping Name="Table" Value="[dt_productos]" />
+                                          <umabh:HtmlTextValueMapping Name="colorseleccionado" Value="[str_colorSeleccionado]" />
+                                          <umabh:HtmlTextValueMapping Name="headers" Value="[dt_productos.Columns.Cast(Of System.Data.DataColumn)()]" />
+                                        </scg:List>
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:CreateHtmlContent.HtmlContentArg>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:CreateHtmlContent>
+                                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Dareu_Email_Creds" CacheStrategy="None" DisplayName="Get Credential" FolderPath="patriciagarcialopez858@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="506,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[mail_pass]" Username="[mail_user]" />
+                                <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ahora creamos el correo, pongo el puerto que nos dijiste, el servidor de gmail, mi correo (desde donde se envia) y su contraseña y ahora le digo que lo envíe al correo que haya indicado el usuario, que el asunto sea el que he puesto ahí hiper cuki, y que el cuerpo sea el saludo, con la variable anterior para que le ponga nombre, precio y url con sus emojis, y la despedida :3" Body="[str_html]" DisplayName="Send SMTP Mail Message: Productos DAREU" Email="sugusmonster@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="506,323" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Port="465" SecureConnection="Auto" SecurePassword="[mail_pass]" Server="smtp.gmail.com" Subject="😍 Resultados de tu búsqueda de periféricos en Dareu 🥳" To="[str_correoDestino]">
+                                  <ui:SendMail.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </ui:SendMail.Files>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:SendMail>
+                                <Assign sap2010:Annotation.AnnotationText="Justo después de esto, como ha salido bien y ha enviado el correo le digo oye, el booleano para repetir la búsqueda se queda en falso, finaliza el proceso, así no entro en bucle infinito (habla la voz de la experiencia HAHAHAHAI)" DisplayName="Poner el boolean de repetir búsqueda en falso" sap:VirtualizedContainerService.HintSize="506,183" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="540,450" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage sap2010:Annotation.AnnotationText="Aquí me muestro en el log que no se han encontrado productos." DisplayName="No se encontraron productos" sap:VirtualizedContainerService.HintSize="506,220" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;No se encontraron productos.&quot;]">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:LogMessage>
+                                <Throw sap2010:Annotation.AnnotationText="Y ahora sí nuestra SL-02 para que nos avise más adelante de este error :D ni en la SL-01 ni en esta finalizaria el proceso ñ.ñ " DisplayName="Throw: SL-02" Exception="[New BusinessRuleException(&quot;SL-02 - No se encontraron productos para: &quot; + str_colorSeleccionado)]" sap:VirtualizedContainerService.HintSize="506,170" sap2010:WorkflowViewState.IdRef="Throw_3">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Throw>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:OpenBrowser.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:OpenBrowser>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap2010:Annotation.AnnotationText="Llegamos al catch!!" DisplayName="Body" sap:VirtualizedContainerService.HintSize="644,734" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="str_SystemError" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage sap2010:Annotation.AnnotationText="Empiezo con un log para mi que me ponga la excepción del error y verlo en el output" DisplayName="SL-00" sap:VirtualizedContainerService.HintSize="610,215" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Error inesperado: &quot; + exception.Message]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <Assign sap2010:Annotation.AnnotationText="Creo una variable para que almacene el error y así usarlo en el cuerpo del correo para que me llegue chulo :D" DisplayName="Variable SL-00 = cuerpo de email" sap:VirtualizedContainerService.HintSize="610,157" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[str_SystemError]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String" xml:space="preserve">["❌ SL-00: Error inesperado durante la ejecución del bot." + vbCrLf +
+"Mensaje del sistema: " + exception.Message + vbCrLf +
+"Fecha y hora: " + Now.ToString]</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Envio el email a mi misma, me puse de admin para no llenarte el correo de spam xd De la misma forma que en todas estas actividades configuro las propiedades, en el asunto le puse ese titulo y en el cuerpo le meto la variable, que ya veras que tiene puesta hasta la fecha y hora del error como nos enseñaste :3" Body="[str_SystemError]" DisplayName="Send SMTP Mail Message: SL-00" Email="sugusmonster@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="610,271" sap2010:WorkflowViewState.IdRef="SendMail_3" IsBodyHtml="False" Password="jtbb dxcn dzza llsv" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="🚨 Alerta SL-00 - Error del sistema inesperado" To="sugusmonster@gmail.com">
+                        <ui:SendMail.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                        </ui:SendMail.Files>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:SendMail>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+                <Catch x:TypeArguments="ui:BusinessRuleException" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap2010:Annotation.AnnotationText="Las excepciones de negociooo! :D estas tienen el truquito chulo para el while jiji" DisplayName="Body" sap:VirtualizedContainerService.HintSize="644,3997" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="str_BusinessError" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:IfElseIfV2 sap2010:Annotation.AnnotationText="Creamos un else if, porque entendi que son más cómodos si se van a manejar varias condiciones a la vez y se lee todo del tirón en vez de dar saltos :3 en la condicion le digo que si el mensaje de la excepcion contiene SL-01 que me trabaje sobre eso, entonces..." Condition="[exception.Message.Contains(&quot;SL-01&quot;)]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="610,3906" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+                        <ui:IfElseIfV2.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="504,643" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap2010:Annotation.AnnotationText="En caso de que identifique una B.E. que no tenemos puesta aquí, le pongo en else y en este asign que genere ese mensaje para enviarlo también por correo :3" DisplayName="B.E. desconocida" sap:VirtualizedContainerService.HintSize="470,177" sap2010:WorkflowViewState.IdRef="Assign_10">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[str_BusinessError]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String" xml:space="preserve">["❔ BusinessRuleException no identificada: " + exception.Message + vbCrLf +
+"Fecha y hora: " + Now.ToString]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="me lo envio por email..." Body="[str_BusinessError]" DisplayName="Send SMTP Mail Message: B.E. Desconocida" Email="sugusmonster@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="470,209" sap2010:WorkflowViewState.IdRef="SendMail_5" IsBodyHtml="False" Password="jtbb dxcn dzza llsv" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="🚨 Alerta: Excepción de Negocio DESCONOCIDA!!" To="sugusmonster@gmail.com">
+                              <ui:SendMail.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </ui:SendMail.Files>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:SendMail>
+                            <ui:LogMessage sap2010:Annotation.AnnotationText="Y me lo muestro en el log!" DisplayName="Error de negocio desconocido" sap:VirtualizedContainerService.HintSize="470,197" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error" Message="[&quot;Error de negocio desconocido: &quot; + exception.Message]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
+                          </Sequence>
+                        </ui:IfElseIfV2.Else>
+                        <ui:IfElseIfV2.ElseIfs>
+                          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[exception.Message.Contains(&quot;SL-02&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence sap2010:Annotation.AnnotationText="La excepción de negocio SL-02 funciona exactamente igual que la SL-01, por no repetirme nada mas le cambio el titulito a las actividades :3" DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,1360" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="Cuerpo del error para el email" sap:VirtualizedContainerService.HintSize="470,116" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[str_BusinessError]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["📭 SL-02: No se encontraron productos para el término '" + str_colorSeleccionado + "'." + vbCrLf +
+"Fecha y hora: " + Now.ToString]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[str_BusinessError]" DisplayName="Send SMTP Mail Message: SL-02" Email="sugusmonster@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="470,178" sap2010:WorkflowViewState.IdRef="SendMail_4" IsBodyHtml="False" Password="jtbb dxcn dzza llsv" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="🚨 Alerta SL-02 - Búsqueda sin resultados" To="sugusmonster@gmail.com">
+                                    <ui:SendMail.Files>
+                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                    </ui:SendMail.Files>
+                                  </ui:SendMail>
+                                  <ui:InputDialog OptionsString="{x:Null}" DisplayName="Intentar con otro diseño" sap:VirtualizedContainerService.HintSize="470,324" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="No se encontraron productos o el estilo no está disponible. ¿Deseas intentar con otro?" Options="[{&quot;Sí&quot;, &quot;No&quot;}]" Title="🤔 ¿Intentar con otro diseño?">
+                                    <ui:InputDialog.Result>
+                                      <OutArgument x:TypeArguments="x:String">[str_respuestaUser]</OutArgument>
+                                    </ui:InputDialog.Result>
+                                  </ui:InputDialog>
+                                  <If Condition="[str_respuestaUser = &quot;Sí&quot;]" DisplayName="If: respuesta &quot;si&quot; = repetir busqueda, &quot;no&quot; = finalizar el proceso" sap:VirtualizedContainerService.HintSize="470,471" sap2010:WorkflowViewState.IdRef="If_9">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="Repetir busqueda en verdadero" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="Repetir busqueda en falso" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                  <ui:LogMessage DisplayName="Mostrar error en el output" sap:VirtualizedContainerService.HintSize="470,166" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[str_BusinessError]" />
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                          </sc:BindingList>
+                        </ui:IfElseIfV2.ElseIfs>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:IfElseIfV2.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="504,1609" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap2010:Annotation.AnnotationText="Creo una variable para almacenar el cuerpo del correo :3" DisplayName="Creacion variable cuerpo de correo SL-01" sap:VirtualizedContainerService.HintSize="470,147" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[str_BusinessError]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String" xml:space="preserve">["⚠️ SL-01: Color o diseño no válido seleccionado." + vbCrLf +
+"Selección del usuario: " + str_colorSeleccionado + vbCrLf +
+"Fecha y hora: " + Now.ToString]</InArgument>
+                              </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Assign>
+                            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Como en el anterior, me envio el correo con el poema HAHAHAH" Body="[str_BusinessError]" DisplayName="Send SMTP Mail Message: SL-01" Email="sugusmonster@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="470,225" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="jtbb dxcn dzza llsv" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="🚨 Alerta SL-01 - Color no válido" To="sugusmonster@gmail.com">
+                              <ui:SendMail.Files>
+                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              </ui:SendMail.Files>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:SendMail>
+                            <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Y aquí le ofrezco al usuario que si quiere volver a buscar otro color que ellija si y volvería a la petciion de colores y si dice no finaliza el proceso :3 Intenté hacerlo con el message box que tiene los botoncitos de yes y no, pero buff me dio muchos poemas y dije mejor el input dialog :c ah, almaceno esto en una variable para la respuesta del usuario :3" DisplayName="Intentar con otro diseño" sap:VirtualizedContainerService.HintSize="470,441" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="No se encontraron productos o el estilo no está disponible. ¿Deseas intentar con otro?" Options="[{&quot;Sí&quot;, &quot;No&quot;}]" Title="🤔 ¿Intentar con otro diseño?">
+                              <ui:InputDialog.Result>
+                                <OutArgument x:TypeArguments="x:String">[str_respuestaUser]</OutArgument>
+                              </ui:InputDialog.Result>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:InputDialog>
+                            <If sap2010:Annotation.AnnotationText="Usamos en la condicion que si su respuesta es si ponga al boolean en verdadero y vuelva al inicio, al while, para que ponga los colores de nuevo y tal, y si dice que no pues que se ponga en falso el boolean y ya termina el proceso :3" Condition="[str_respuestaUser = &quot;Sí&quot;]" DisplayName="If: Si marca &quot;si&quot; vuelve al principio, &quot;no&quot; finaliza el proceso" sap:VirtualizedContainerService.HintSize="470,525" sap2010:WorkflowViewState.IdRef="If_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="Repetir busqueda en verdadero" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="Repetir busqueda en falso" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[boo_repetirBusqueda]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:LogMessage sap2010:Annotation.AnnotationText="Y por último le pido que me muestre el mensaje de error para verlo en el log :D" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="470,211" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[str_BusinessError]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
+                          </Sequence>
+                        </ui:IfElseIfV2.Then>
+                      </ui:IfElseIfV2>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="644,303" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="En el momento que la ejecución termina, ponemos este log para que avise de que ha finalizado, bien sea porque salió todo bien o por selección del usuario :3" DisplayName="Fin de la ejecucion" sap:VirtualizedContainerService.HintSize="610,243" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;La ejecución ha finalizado.&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+          </Sequence>
+        </ui:InterruptibleWhile.Body>
+        <ui:InterruptibleWhile.Condition>
+          <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="boo_repetirBusqueda = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+        </ui:InterruptibleWhile.Condition>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InterruptibleWhile>
+    </Sequence>
+  </Sequence>
+</Activity>
